@@ -16,7 +16,7 @@ Install
 
    .. code:: shell
 
-      git clone https://github.com/PytLab/scaks.git
+      git clone https://github.com/xmcao-ccc/scaks.git
 
       cd scaks
       python setup.py install
