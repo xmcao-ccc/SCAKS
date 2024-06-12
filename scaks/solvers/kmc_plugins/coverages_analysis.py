@@ -97,7 +97,8 @@ class CoveragesAnalysis(KMCAnalysisPlugin):
             times_str = "times = []\n"
             steps_str = "steps = []\n"
             coverages_str = "coverages = {}\n".format([[]]*len(self.__possible_types))
-            possible_types_str = get_list_string("possible_types", self.__possible_types)
+            possible_types_update = [f"'{string}'" for string in self.__possible_types]
+            possible_types_str = get_list_string("possible_types", possible_types_update)
             with open(self.__filename, "w") as f:
                 content = (file_header + times_str + steps_str +
                            coverages_str + "\n" + possible_types_str)
